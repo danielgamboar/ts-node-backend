@@ -13,9 +13,6 @@ logs
 results
 tmp
 
-# Build
-public/css/main.css
-
 # Coverage reports
 coverage
 
@@ -25,6 +22,7 @@ coverage
 # Dependency directory
 node_modules
 bower_components
+build
 
 # Editors
 .idea

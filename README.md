@@ -1,37 +1,42 @@
-# TypeScript + Node + Docker (with code hot-reloading in the container)
+# Immfly
 
-## For running locally
+## _Backend server with typescript, node, and express. Jest unit tests and docker._
 
-`npm i`
+This Express server was developed making use of:
 
-### Start the dev server
+- Node.js and Express.js
+- TypeScript
+- Jest for unit tests
+- Axios for external API requests
+- Dotenv to read environmental variables
+- A couple of beer cans and several coffee cups ☕
 
-`npm run dev`
+## Installation
 
-### Build the project
+Prerequisites:
 
-`npm run build`
+- Node v16 with npm or yarn
 
-### Start built project
+Install the dependencies and devDependencies and start the server.
 
-`npm start`
+```sh
+cd ts-node-backend
+npm i or yarn
+npm run dev or yarn dev
+```
 
-## For running Docker Containers
+Running with docker
 
-_You'll need docker installed on your machine to run this in case you didn't know!_
+```sh
+docker-compose build
+docker-compose run
+```
 
-### Build the image
+## Endpoints
 
-`docker-compose build`
-
-### Start the dev server
-
-`make up`
-
-### Stop the server
-
-`make down`
-
-### Build and start production build
-
-`make up-prod`
+If runnnig locally, you can access the endpoint with http://localhost:4000/
+| Route | Method | Description |
+| ------ | ------ | ------ |
+| /countries?filter=ia&order=asc | This will return a list of countries filtered by any given string (must be an string) and order it ascendant or descendant ([asc, desc]) |
+| /reverse/:phrase | When providing a valid string, this endpoint will return the given phrase reversed and with uppercased vowels |
+| /append?start=start&end=end | The append route will return a new array of elements where first one will be the start value (string), the last one the end value (string). In the middle of them the SIMPLE_ARRAY provided as a enviromental variable |

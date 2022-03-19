@@ -1,4 +1,4 @@
-import app from "../index";
+import app from "../server";
 import request from "supertest";
 import { sorted } from "../helpers";
 import { doesNotMatch } from "assert";

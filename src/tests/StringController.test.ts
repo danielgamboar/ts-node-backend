@@ -1,4 +1,4 @@
-import app from "../index";
+import app from "../server";
 import request from "supertest";
 import { reverseString, allVowelsAreUpperCase } from "../helpers";
 

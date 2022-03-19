@@ -51,7 +51,7 @@ router.get("/append", async (req: Request, res: Response) => {
   }
 });
 
-// router.get("*", (req: Request, res: Response) => {
-//   res.status(404).send({ error: "Where are you trying to go?" });
-// });
+router.get("*", (req: Request, res: Response) => {
+  res.status(404).send({ error: "Where are you trying to go?" });
+});
 export default router;
